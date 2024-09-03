@@ -1,0 +1,53 @@
+* {
+    font-family: roboto Slab, serif;
+  }
+  .content {
+    width: 560px;
+  }
+  body {
+    position: absolute;
+    width: 100px;
+    left: 33%;
+    margin-left: -50px;
+  }
+  .tieude {
+    color: rgb(19, 151, 151);
+    text-align: center;
+  }
+  .tin {
+    font-weight: bold;
+  }
+  .tinlienquan {
+    color: aliceblue;
+    background-color: rgb(66, 189, 189);
+  }
+  .linktin {
+    text-decoration: none;
+    color: gray;
+  }
+  a.linktin:hover {
+    color: rgb(228, 228, 19);
+  }
+  p {
+    text-align: justify;
+  }
+  .hinhanh {
+    text-align: center;
+    width: 560px;
+    height: 430px;
+    background-color: rgb(194, 186, 186);
+  }
+  img {
+    height: 365px;
+  }
+  .chuthich {
+    color: rgb(66, 68, 189);
+    text-align: center;
+  }
+  h6 {
+    text-align: right;
+    font-size: medium;
+  }
+  h3 {
+    font-size: x-large;
+  }
