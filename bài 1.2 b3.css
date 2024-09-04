@@ -1,0 +1,11 @@
+.solid {
+    border-style: solid;
+background-color:green;
+color:aliceblue;
+width:60px;
+height:25px;
+float: left;
+text-align: center;
+margin-inline-end: 150px;
+border-radius: 5px;
+}
