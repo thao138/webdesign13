@@ -1,0 +1,54 @@
+#menu ul{
+    background: black ;
+    list-style-type: none;
+    text-align: center;
+}
+#menu li{
+    color:black ;
+    display: inline-block;
+    width: 120px;
+    height:40px;
+    line-height: 40px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    color:rgb(237, 241, 245) ;
+}
+#menu ul li a{
+    text-decoration: none ;
+    color:aliceblue;
+    display:block
+}
+#menu ul li a:hover {
+    background: green;
+    color: aliceblue;
+}
+
+
+
+#doc li{
+    color: rgb(242, 247, 248);
+    width:150px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #d72222;
+   
+}
+#doc li a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+    display:block;
+}
+#doc ul{
+    list-style-type: none;
+    text-align: center;
+}
+#doc ul li a:hover {
+    background:grey;
+    color: black;
+}
