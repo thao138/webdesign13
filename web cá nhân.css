@@ -10,14 +10,6 @@
     height:40px;
     line-height: 40px;
 }
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    font-family: sans-serif;
-    color:rgb(237, 241, 245) ;
-}
 #menu ul li a{
     text-decoration: none ;
     color:black;
@@ -27,16 +19,47 @@ body{
     background: rgb(166, 209, 244);
     color: rgb(57, 151, 233);
 }
-.zoom-image {
-    transition: transform 0.3s ease;
-    cursor: pointer; 
-    max-width: 100%;
+
+.grid {
+    display: grid;
+    grid-template-columns: calc(50% - (30px * 1/2)) calc(50% - (30px * 1/2));
+    grid-column-gap: 10px;
+  }
+  .col img {
+    object-fit:cover;
+    width: 750px;
+    height: 500px;
+    display: block;
+    transition: opacity 0.3s ease;
 }
 
-.zoom-image:hover {
-    transform: scale(1.03); 
+/* Hiệu ứng hover để thay đổi ảnh */
+.col:hover {
+    transform: scale(1.03); /* Phóng to ảnh khi hover */
 }
 
+/* Đặt vị trí của ảnh thay thế khi hover */
+.col img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    width: 750px;
+    height: 500px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.col:hover img:nth-child(2) {
+    opacity: 1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: sans-serif;
+    color:rgb(237, 241, 245) ;
+}
 * h1{color:rgb(7, 7, 89) }
 body {
     background-color: rgb(223, 238, 247);
