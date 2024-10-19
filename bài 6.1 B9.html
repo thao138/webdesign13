@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi Màu Nền</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white; /* Nền mặc định là màu trắng */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <center><p>Đổi màu tôi đi</p></center>
+    <button onclick="changeBackgroundColor()">Màu xanh </button>
+</div>
+
+    <script>
+        function changeBackgroundColor() {
+            document.body.style.backgroundColor ="blue"; // Đổi nền thành màu xanh
+        }
+    </script>
+
+</body>
+</html>

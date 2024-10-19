@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h2 {
+            text-align: center;
+            color: #6a1b9a;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>FORM ĐĂNG KÝ</h2>
+    <form id="registerForm" onsubmit="return validateForm()">
+        <label for="ho">Họ:</label>
+        <input type="text" id="ho" name="ho"><br><br>
+        
+        <label for="ten">Tên:</label>
+        <input type="text" id="ten" name="ten"><br><br>
+        
+        <label for="sdt">Số điện thoại:</label>
+        <input type="text" id="sdt" name="sdt"><br><br>
+        
+        <label>Giới tính:</label>
+        <input type="radio" name="gioitinh" value="Nam"> Nam
+        <input type="radio" name="gioitinh" value="Nữ"> Nữ<br><br>
+        
+        <label for="sothich">Sở thích:</label><br>
+        <input type="checkbox" name="sothich" value="Đọc sách"> Đọc sách
+        <input type="checkbox" name="sothich" value="Xem phim"> Xem phim
+        <input type="checkbox" name="sothich" value="Nghe nhạc"> Nghe nhạc
+        <input type="checkbox" name="sothich" value="Đá bóng"> Đá bóng<br><br>
+        
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        
+        <p id="error-message" class="error"></p>
+    </form>
+
+    <script>
+        function validateForm() {
+            var ho = document.getElementById("ho").value;
+            var ten = document.getElementById("ten").value;
+            var sdt = document.getElementById("sdt").value;
+            var errorMessage = document.getElementById("error-message");
+
+            // Xóa lỗi trước khi kiểm tra
+            errorMessage.innerHTML = "";
+
+            // Kiểm tra họ và tên
+            if (ho === "" || ten === "") {
+                errorMessage.innerHTML = "Vui lòng nhập họ và tên!";
+                return false;
+            }
+
+            // Kiểm tra số điện thoại (phải là số và độ dài 10 ký tự)
+            var phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(sdt)) {
+                errorMessage.innerHTML = "Số điện thoại phải là 10 chữ số!";
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>
