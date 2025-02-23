@@ -1,0 +1,259 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    display: flex;
+    max-width: 1500px; 
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 15px;  /* Thụt vào bên trái */
+    padding-right: 15px ; 
+    box-sizing: border-box; 
+}
+.image-section {
+    width: 60%;
+    text-align: center;
+    position: relative;
+}
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slides img {
+    width: 100%;
+    height: 560px ;
+    object-fit: cover;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+}
+.prev { left: 5px; }
+.next { right: 5px; }
+.villa-info {
+    margin-top: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+.price {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+}
+.info-section {
+    width: 40%;
+    padding-left: 10px;
+}
+@media screen and (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap; /* Cho phép nội dung xuống hàng khi không đủ không gian */
+        justify-content: center;
+        padding-left: 0 ;
+        padding-right: 0 ;
+}
+    .image-section {
+        flex: 1;
+        min-width: 300px;
+}
+    .info-section {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        max-width: 100%;
+        padding: 20px;
+}
+}
+.booking-form {
+    background-color: #f5e6d4;
+    padding: 40px;
+    border-radius: 0;
+    text-align: center;
+    position: relative;
+}
+.booking-form h3 {
+    text-align: center;
+}
+.booking-form hr {
+    width: 90% ; 
+    margin: 10px auto 20px auto;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+.form-group label {
+    display: block;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.group {
+    width: 95%;
+    padding: 5px;
+    border: 1px solid #000;
+    border-radius: 0;
+    font-size: 16px;
+    background-color: #f5e6d4;
+    display: block;
+}
+.submitBooking {
+    width: 70%;
+    padding: 10px;
+    background-color: #c2a687;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    color: white;
+}
+.submitBooking:hover {
+    background: #91795d;
+}
+.description {
+    max-width: 1200px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+.container2 {
+    max-width: 1350px; 
+    width: 90%; 
+    margin: 0 auto; 
+    box-sizing: border-box; 
+}
+h1, h3  {
+    color: #333;
+}
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+    padding: 5px;
+}
+.info-box:last-child { 
+    grid-column: span 2; 
+}
+.info-box {
+    flex: 1 1 100%;
+    background: #dfdede;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1 1 calc(50% - 15px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+}
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style-type: disc;
+    padding-left:30px;
+    margin-bottom: 30px;
+}
+.service-container li {
+    flex: 1 1 calc(50% - 10px);         
+}
+@media screen and (max-width: 768px) {
+    .service-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-left: 40px ;
+}
+
+    .service-container li {
+        flex: 1 1 100%; /* Mỗi mục chiếm 100% khi thu nhỏ màn hình */
+        list-style-position: outside;
+}
+}
+.section-title {
+    font-size: 25px;
+    display: inline-block;
+    background: #f5e6d4;
+    padding:  5px 10px;
+    margin-top: 30px ;
+    border-radius: 30px;
+    font-weight: bold;
+}
+.rules-container {
+    font-size: 15px;
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.rule-box {
+    flex: 1 ;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow:0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+.edit-btn {
+    font-size: 20px ;
+    color: black;
+    display: block;
+    margin-top: 50px;
+    padding: 8px 20px; 
+    width: auto; 
+    background: #f5e6d4;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+}
+.edit-btn:hover {
+    background: #dac6ad;
+}
+.image-gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+}
+.image-gallery img {
+    width: 33%; /* Đặt kích thước ảnh chiếm khoảng 1/3 chiều rộng container */
+    height: 300px ;
+    object-fit: cover;
+    
+    border-radius: 10px;
+    object-fit: cover; 
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .image-gallery img {
+        width: 100%; 
+        
+    }
+}
+
+
+
